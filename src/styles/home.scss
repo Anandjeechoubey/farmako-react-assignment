@@ -1,0 +1,27 @@
+.home-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home-container > main {
+    width: 100%;
+}
+
+.patient-details {
+    padding: 60px;
+}
+.patient-info {
+    background: $backgroundBlue;
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+}
+
+.patient-info > div {
+    flex-grow: 1;
+}
+
+// .patient-info span {
+//     min-width: 500px;
+// }

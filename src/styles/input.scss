@@ -1,0 +1,14 @@
+.input-field {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: $backgroundBlue;
+}
+
+.input-field:hover {
+    background: $hoverBlue;
+}
+
+.input-field:focus {
+    border: 1px solid $primaryColor;
+}

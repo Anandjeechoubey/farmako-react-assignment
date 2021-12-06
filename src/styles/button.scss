@@ -1,0 +1,13 @@
+.button-primary {
+    border-radius: 5px;
+    background: $primaryColor;
+    border: none;
+    color: white;
+    padding: 10px 0px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.disabled {
+    background: $disabledColor;
+}

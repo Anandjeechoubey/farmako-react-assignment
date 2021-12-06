@@ -1,0 +1,31 @@
+.sidebar-container {
+    background: $sidebarBackground;
+    color: white;
+    padding: 30px 0;
+    min-width: 300px;
+}
+
+.logo {
+    padding: 20px;
+    margin: 20px;
+    border-bottom: 1px solid $backgroundBlue;
+}
+
+.patient-list > h2 {
+    margin: 10px 30px;
+}
+
+.patient-list > div {
+    padding: 20px 40px;
+}
+
+.patient-list > div:hover {
+    background: #262638;
+}
+
+.patient-list > div > span:nth-child(odd) {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    background: $sidebarHighlight;
+}
