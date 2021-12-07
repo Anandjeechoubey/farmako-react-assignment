@@ -1,0 +1,21 @@
+.timeline-card > div {
+    border-left: 3px solid black;
+    padding-left: 10px;
+}
+
+.timeline-details {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 0px 20px;
+}
+
+.timeline-details > a {
+    margin-right: 20px;
+}
+
+.prescrition-report-preview {
+    background: $backgroundBlue;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}

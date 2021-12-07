@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 
-import Button from '../components/button'
-import Input from '../components/input'
-
 import { getOTP, loginUser } from '../store/actions/user';
 
-
+import Button from '../components/button'
+import Input from '../components/input'
+import Logo from "../assets/images/logoAndText.png"
 
 const Login = () => {
     const [phone, setPhone] = useState(null);
@@ -29,8 +28,10 @@ const Login = () => {
     return (
         <div className="login-container">
            <div className="login-card">
-               <h1>farmako Docs</h1>
-               <hr className="divider" />
+               <div className="login-card-header">
+                <img src={Logo} width={150} /><h1>Docs</h1>
+               </div>
+                <hr className="divider" />
                {step === 1 ? (
                    <>
                     <p>Enter you mobile number registered with farmako to login</p>

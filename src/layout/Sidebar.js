@@ -1,4 +1,5 @@
 import React from 'react'
+import logoDark from '../assets/images/logoAndText.dark.svg'
 
 const Patients = [
     {
@@ -19,7 +20,7 @@ const Sidebar = () => {
     return (
         <div className="sidebar-container">
             <section className="logo">
-                farmakologo
+                <img src={logoDark} alt="logo" />
             </section>
             <section className="patient-list">
                 <h2>Today's Patients</h2>
