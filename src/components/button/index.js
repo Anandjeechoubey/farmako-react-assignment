@@ -19,14 +19,14 @@ const Button = ({ tittle, action, disabled = false, loading = false }) => {
       className={`button-primary ${disabled && "disabled"}`}
     >
       {loading ? (
-        <Lottie
-          options={defaultOptions}
-          height={40}
-          width={80}
-          isStopped={false}
-          isPaused={false}
-        />
-        // "Loading..."
+        // <Lottie
+        //   options={defaultOptions}
+        //   height={40}
+        //   width={80}
+        //   isStopped={false}
+        //   isPaused={false}
+        // />
+        "Loading..."
       ) : (
         tittle
       )}

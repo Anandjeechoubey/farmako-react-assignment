@@ -1,24 +1,35 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux'
 
-import store from './store'
+import configureStore from './store'
 
 import Home from './pages/Home';
 import Login from './pages/Login';
 
-// import Navbar from "./layout/Navbar";
-
 import './styles/index.scss';
+
+
+const store = configureStore();
+
+function isLoggedIn() {
+  if (localStorage.getItem('token')) {
+    return true;
+  }
+  return false;
+}
 
 const App = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        {/* <Navbar /> */}
         <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/login" component={Login} />
+          <Route path="/" component={() => (
+            !isLoggedIn() ? <Redirect to="/login" /> : <Home />
+          )} exact />
+          <Route path="/login" component={() => (
+            isLoggedIn() ? <Redirect to="/" /> : <Login />
+          )} />
         </Switch>
       </BrowserRouter>
     </Provider>
