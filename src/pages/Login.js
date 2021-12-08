@@ -26,6 +26,9 @@ const Login = () => {
     const handleLogin = () => {
         dispatch(loginUser(phone, otp));
     };
+    const reset = () => {
+        dispatch({ type: "RESET" });
+    };
     useLayoutEffect(() => {
         if(localStorage.getItem('token')){
             history.push('/');
@@ -51,7 +54,7 @@ const Login = () => {
                     <Input type="number" value={otp} name="phone" onChange={(e) => setOTP(e.target.value)} action={handleLogin} placeholder="0 0 0 0" />
                     <Button disabled={!otp} loading={loading} action={handleLogin} tittle="Login" />
                     </>
-               ) : (<h3>Something went wrong</h3>)}
+               ) : (<div><h3>Something went wrong</h3><Button action={reset} tittle="Try Again" /></div>)}
                
            </div>
         </div>
